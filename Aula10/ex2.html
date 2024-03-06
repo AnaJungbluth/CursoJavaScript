@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 2.1 DOM</title>
+
+
+</head>
+<body>
+    <h1>Somado os Números</h1>
+    <input type="number" name="text1" id="num1"> +
+    <input type="numer" name="text2" id="num2">
+    <input type="button" value="somar" onclick="somar()">
+
+    <div id="res">
+        Resultado:
+    </div>
+    <script>
+        function somar(){
+            var tex1 = document.getElementById('num1')
+            var tex2 = document.querySelector('input#num2')
+            var res = document.getElementById('res')
+            var n1 = Number(tex1.value)
+            var n2 = Number(tex2.value) 
+            var soma = n1 + n2
+            
+            res.innerHTML = `<br>A soma entre ${n1} e ${n2} = <b>${soma}</b>`
+        }
+        </script>
+</body>
+</html>
